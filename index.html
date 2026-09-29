@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MakerCrafter: an open-source project notebook for makers</title>
+<meta name="description" content="MakerCrafter is an open-source project notebook and open file format for makers: ideas, fonts, colors, materials, settings and build steps in one printable notebook.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --graphite: #2E2E2E;
+    --ink: #3d3d3d;
+    --muted: #6b6b6b;
+    --accent: #FF4B33;
+    --accent-ink: #d43a25;
+    --paper: #ffffff;
+    --grid: #e9e7e4;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e8e6e3;
+      --muted: #a9a6a2;
+      --paper: #1f1f1f;
+      --grid: #2c2c2c;
+      --accent-ink: #ff6b57;
+    }
+    h1 { color: #f5f4f2 !important; }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    min-height: 100vh;
+    font-family: "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--ink);
+    background-color: var(--paper);
+    /* graph-paper page, like a maker's notebook */
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  main {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 4.5rem 1.5rem 3rem;
+  }
+  .logo {
+    width: 96px;
+    height: 96px;
+    border-radius: 22px;
+    display: block;
+  }
+  h1 {
+    margin: 1.75rem 0 0.25rem;
+    font-size: clamp(2.75rem, 8vw, 4.25rem);
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    color: var(--graphite);
+  }
+  .tagline {
+    margin: 0 0 2rem;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--accent-ink);
+  }
+  p { margin: 0 0 1.25rem; }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    border-left: 3px solid var(--accent);
+  }
+  li {
+    padding: 0.35rem 0 0.35rem 1.1rem;
+  }
+  li strong {
+    color: var(--graphite);
+    font-weight: 600;
+  }
+  @media (prefers-color-scheme: dark) { li strong { color: #f5f4f2; } }
+  .status {
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--grid);
+    color: var(--muted);
+  }
+  a {
+    color: var(--accent-ink);
+    font-weight: 600;
+    text-underline-offset: 3px;
+  }
+  a:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+</style>
+</head>
+<body>
+<main>
+  <img class="logo" src="logo.png" alt="MakerCrafter logo" onerror="this.remove()">
+  <h1>MakerCrafter</h1>
+  <p class="tagline">An open-source project notebook for makers.</p>
+
+  <p>MakerCrafter is where a project comes together before it goes to Cricut Design Space,
+  xTool Studio, LightBurn or your slicer: ideas, reference images, fonts, colors,
+  materials, machine settings and build steps, all in one notebook you can print.</p>
+
+  <ul>
+    <li><strong>Any device.</strong> iPhone, iPad, Mac and PC.</li>
+    <li><strong>Your data, your choice.</strong> Local-first, synced through your own cloud or your own server.</li>
+    <li><strong>Only what you use.</strong> A small core, with add-ons for lasers, 3D printing, vinyl and more.</li>
+    <li><strong>An open format.</strong> Projects are shared as <code>.makercrafter</code> files any tool can read.</li>
+  </ul>
+
+  <p class="status">MakerCrafter is in early design. Follow along on
+  <a href="https://github.com/makercrafter">GitHub</a>.</p>
+</main>
+</body>
+</html>
